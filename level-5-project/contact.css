@@ -1,0 +1,124 @@
+/* Contact Manager Styles */
+:root {
+    --primary-color: #0d6efd;
+    --success-color: #198754;
+    --danger-color: #dc3545;
+    --light-bg: #f8f9fa;
+}
+
+body {
+    font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+.contact-list {
+    display: flex;
+    flex-direction: column;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.contact-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    transition: background-color 0.2s ease;
+}
+
+.contact-item:last-child {
+    border-bottom: none;
+}
+
+.contact-item:hover {
+    background-color: #f8f9fa;
+}
+
+.contact-info {
+    flex: 1;
+}
+
+.contact-name {
+    margin: 0;
+    color: #212529;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.contact-phone {
+    margin: 0.25rem 0 0 0;
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.contact-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.contact-actions button {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    white-space: nowrap;
+}
+
+.contact-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.contact-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.contact-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.contact-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+.form-control:focus,
+.form-control:active {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+@media (max-width: 576px) {
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .contact-actions {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .contact-actions button {
+        flex: 1;
+    }
+}
+
+.alert {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+button {
+    transition: all 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+.card {
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+}

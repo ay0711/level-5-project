@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undo / Redo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="undo.css">
+</head>
+
+
+    <main class="container page-shell">
+        <div class="page-header mb-3">
+            <div>
+                <p class="text-uppercase text-primary fw-semibold small mb-1">Question 3</p>
+                <h1 class="mb-0">Undo / Redo (Two Stacks)</h1>
+            </div>
+            <a class="back-home" href="index.html">← Home</a>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="card page-card">
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <div>
+                                <h2 class="h4 mb-0">Undo / Redo System</h2>
+                            </div>
+                            <div class="text-end">
+                                <div class="d-flex align-items-center gap-2 justify-content-end">
+                                    <span class="badge bg-primary" id="cloud-status">Idle</span>
+                                    <small class="text-muted" id="last-saved">Last saved: --</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <form id="action-form" class="row gy-2 gx-2 align-items-end mb-3">
+                            <div class="col-sm-8">
+                                <label for="action-input" class="form-label mb-1">New action</label>
+                                <input type="text" class="form-control" id="action-input" placeholder="Type something to add" required>
+                            </div>
+                            <div class="col-sm-4 d-flex gap-2">
+                                <button type="submit" class="btn btn-primary flex-fill">Add</button>
+                                <button type="button" class="btn btn-outline-secondary flex-fill" id="clear-btn">Clear</button>
+                            </div>
+                        </form>
+
+                        <div class="d-flex gap-2 mb-3">
+                            <button type="button" class="btn btn-outline-danger" id="undo-btn">Undo</button>
+                            <button type="button" class="btn btn-outline-success" id="redo-btn">Redo</button>
+                        </div>
+
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-body-secondary d-flex justify-content-between align-items-center">
+                                        <span>Actions (stack top first)</span>
+                                        <span class="badge bg-light text-dark" id="actions-count">0</span>
+                                    </div>
+                                    <ul class="list-group list-group-flush" id="actions-list"></ul>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="card h-100">
+                                    <div class="card-header bg-body-secondary d-flex justify-content-between align-items-center">
+                                        <span>Undone (redo stack)</span>
+                                        <span class="badge bg-light text-dark" id="undone-count">0</span>
+                                    </div>
+                                    <ul class="list-group list-group-flush" id="undone-list"></ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="toast-container position-fixed top-0 end-0 p-3" id="toast-container"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="undo.js"></script>
+</body>
+</html>

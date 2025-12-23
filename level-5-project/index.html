@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Structures</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="common.css">
+</head>
+<body class="overflow-hidden">
+    <!-- <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="#home">All-in-One Apps</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navMenu">
+                <div class="ms-auto d-flex align-items-center gap-2">
+                    <a class="btn btn-sm btn-outline-primary" href="#apps">Explore apps</a>
+                </div>
+            </div>
+        </div>
+    </nav> -->
+
+    <main class="container-fluid  page-shell">
+        <section class="hero" id="home">
+            <!-- <p class="text-uppercase text-primary fw-semibold small mb-2">Playground</p> -->
+            <h1 class="display-5 mb-3">Four small, focused projects in one place.</h1>
+            <p class="lead">Jump into a contact book powered by a Map, a FIFO task queue, an undo/redo stack, and a unique visitor tracker backed by a Set. Use the cards below to open each page.</p>
+        </section>
+
+        <section id="apps" class="grid">
+            <article class="card-ghost">
+                <div class="tag">Map</div>
+                <h2>Contact Manager</h2>
+                <p>Store, search, edit, and delete contacts instantly with Map-backed operations.</p>
+                <a class="btn-primary-soft" href="contact.html">Open Contact Manager →</a>
+            </article>
+
+            <article class="card-ghost">
+                <div class="tag">Queue • FIFO</div>
+                <h2>Task Scheduler</h2>
+                <p>Add work items to a queue, mark the next one complete, and persist them locally.</p>
+                <a class="btn-primary-soft" href="tasks.html">Open Task Scheduler →</a>
+            </article>
+
+            <article class="card-ghost">
+                <div class="tag">Stacks • Undo/Redo</div>
+                <h2>Undo / Redo</h2>
+                <p>Two-stack model for undo/redo with autosave to localStorage—no database needed.</p>
+                <a class="btn-primary-soft" href="undo.html">Open Undo / Redo →</a>
+            </article>
+
+            <article class="card-ghost">
+                <div class="tag">Set • Uniqueness</div>
+                <h2>Visitor Tracker</h2>
+                <p>Track unique IDs or emails, catch duplicates, and keep counts across sessions.</p>
+                <a class="btn-primary-soft" href="visitors.html">Open Visitor Tracker →</a>
+            </article>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
