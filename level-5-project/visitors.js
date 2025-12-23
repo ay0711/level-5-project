@@ -1,7 +1,3 @@
-// Unique Visitor Tracker - Set-Based Implementation
-// Time Complexity: O(1) for add/check operations using Set
-// Space Complexity: O(n) where n is number of unique visitors
-
 class UniqueVisitorTracker {
     constructor() {
         this.uniqueVisitors = new Set();

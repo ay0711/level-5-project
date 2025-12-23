@@ -1,7 +1,5 @@
-// Contact Manager using Map for O(1) operations
 class ContactManager {
     constructor() {
-        // Map provides O(1) average time complexity for get, set, delete operations
         this.contacts = new Map();
         this.loadFromStorage();
     }

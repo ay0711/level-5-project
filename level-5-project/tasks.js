@@ -1,4 +1,3 @@
-// Task Queue (FIFO)
 let taskQueue = [];
 
 const taskForm = document.getElementById('task-form');
