@@ -3,8 +3,19 @@ body {
     font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
 }
 
+.card {
+    border-radius: 16px;
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    animation: fadeUp 0.45s ease both;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
 .card ul {
-    max-height: 260px;
+    max-height: 320px;
     overflow-y: auto;
 }
 
@@ -15,4 +26,22 @@ body {
 .card ul::-webkit-scrollbar-thumb {
     background: #adb5bd;
     border-radius: 6px;
+}
+
+form .form-control {
+    min-height: 46px;
+}
+
+#cloud-status {
+    animation: floatPulse 3s ease-in-out infinite;
+}
+
+@media (max-width: 768px) {
+    .card ul {
+        max-height: 45vh;
+    }
+
+    .btn {
+        min-height: 44px;
+    }
 }

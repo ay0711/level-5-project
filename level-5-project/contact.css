@@ -9,20 +9,34 @@ body {
     font-family: 'Space Grotesk', 'Segoe UI', sans-serif;
 }
 
+.card {
+    border-radius: 16px;
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+    animation: fadeUp 0.45s ease both;
+}
+
+.card:hover {
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12) !important;
+    transform: translateY(-3px);
+}
+
 .contact-list {
     display: flex;
     flex-direction: column;
-    max-height: 500px;
+    max-height: 520px;
     overflow-y: auto;
+    padding: 2px;
 }
 
 .contact-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0.75rem;
     padding: 1rem;
     border-bottom: 1px solid #e9ecef;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+    animation: fadeUp 0.35s ease both;
 }
 
 .contact-item:last-child {
@@ -31,35 +45,41 @@ body {
 
 .contact-item:hover {
     background-color: #f8f9fa;
+    transform: translateY(-2px);
 }
 
 .contact-info {
     flex: 1;
+    min-width: 0;
 }
 
 .contact-name {
     margin: 0;
     color: #212529;
-    font-weight: 600;
-    font-size: 1rem;
+    font-weight: 700;
+    font-size: clamp(1rem, 1.6vw, 1.1rem);
 }
 
 .contact-phone {
     margin: 0.25rem 0 0 0;
     color: #6c757d;
-    font-size: 0.95rem;
+    font-size: clamp(0.95rem, 1.5vw, 1rem);
+    word-break: break-word;
 }
 
 .contact-actions {
     display: flex;
     gap: 0.5rem;
-    margin-left: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
 }
 
 .contact-actions button {
-    font-size: 0.85rem;
-    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    padding: 0.45rem 0.9rem;
     white-space: nowrap;
+    flex: 1 0 auto;
+    min-width: 110px;
 }
 
 .contact-list::-webkit-scrollbar {
@@ -85,39 +105,34 @@ body {
     box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
 }
 
-@media (max-width: 576px) {
-    .contact-item {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.75rem;
-    }
-
-    .contact-actions {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    .contact-actions button {
-        flex: 1;
-    }
-}
-
 .alert {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 button {
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease;
 }
 
 button:hover {
     transform: translateY(-2px);
 }
 
-.card {
-    transition: box-shadow 0.3s ease;
-}
+@media (max-width: 576px) {
+    .contact-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-.card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+    .contact-actions {
+        width: 100%;
+        gap: 0.4rem;
+    }
+
+    .contact-actions button {
+        flex: 1 1 48%;
+    }
+
+    .btn {
+        min-height: 44px;
+    }
 }
